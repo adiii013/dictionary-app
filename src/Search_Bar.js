@@ -3,9 +3,9 @@ import { View, TextInput, StyleSheet } from "react-native";
 import { Feather } from '@expo/vector-icons';
 
 
-function Search_Bar() {
+function Search_Bar({term,newTermChange}) {
 
-    const [initialName,finalName] = useState('');
+
 
     return (
             <View style={styles.searchContainer}>
@@ -13,8 +13,8 @@ function Search_Bar() {
                 <TextInput
                     placeholder='Enter Word'
                     style={styles.searchInput}
-                    onChangeText={changeText=> finalName(changeText)}
-                    defaultValue={initialName}
+                    onChangeText={newTerm=>newTermChange(newTerm)}
+                    defaultValue={term}
                 ></TextInput>
             </View>
     )
