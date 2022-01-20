@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, Button, StyleSheet, FlatList, ScrollView } from "react-native";
+import { View, Text, Button, StyleSheet,  ScrollView } from "react-native";
 import Search_Bar from "./Search_Bar";
 function Search_Result() {
 
@@ -32,8 +32,8 @@ function Search_Result() {
                     newTermChange={newTerm => finalName(newTerm)}
                 ></Search_Bar>
 
-                <View>
-                    <Button title="Click" onPress={getData}></Button>
+                <View style={{width:100,alignSelf:'center'}}>
+                    <Button title="Search"  onPress={getData} ></Button>
                 </View>
 
                 <View style={styles.container}>
@@ -76,9 +76,9 @@ const styles = StyleSheet.create({
         fontWeight:'bold'
     },
     pairValue: {
-        fontSize: 19,
-        
-    }
+        fontSize: 19,    
+    },
+    
 })
 
 export default Search_Result;
